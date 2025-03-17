@@ -1,0 +1,119 @@
+---
+import Style from "../components/css/style.css";
+import Layout from "../components/layout.astro";
+import Header from "../components/header.astro";
+import Intro from "../components/intro.astro";
+import Opgaver from "../components/opgaver.astro";
+import Stories from "../components/stories.astro";
+import Faq from "../components/faq.astro";
+import Cta from "../components/cta.astro";
+import Kort from "../components/kort.astro";
+import Footer from "../components/footer.astro";
+---
+
+<Layout>
+  <Header />
+  <Intro />
+  <Opgaver />
+  <Stories />
+  <Faq />
+  <Cta />
+  <Kort />
+  <Footer />
+</Layout>
+
+<style>
+  /* === CSS RESET === */
+  /* Remove default margins, padding, and box sizing inconsistencies */
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Improve text rendering */
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-size-adjust: 100%;
+  }
+
+  /* Remove default list styles */
+  ul,
+  ol {
+    list-style: none;
+  }
+
+  /* Reset anchor tags */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  /* Remove default button styling */
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+    border: none;
+    background: none;
+    outline: none;
+  }
+
+  /* Ensure images are responsive */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Set a base font */
+  body {
+    font-family:
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      "Helvetica Neue",
+      Arial,
+      sans-serif;
+    line-height: 1.5;
+    background-color: #fff;
+    color: #333;
+  }
+
+  /* Ensure full height */
+  html,
+  body {
+    height: 100%;
+  }
+
+  @font-face {
+    font-family: "work-sans";
+    src: url(/nebulous-neptune/src/assets/fonts/WorkSans-VariableFont_wght.woff);
+  }
+
+  @font-face {
+    font-family: "oliver";
+    src: url(/nebulous-neptune/src/assets/fonts/Oliver-Regular.woff);
+  }
+
+  html {
+    --primary-font: "work-sans";
+    --secondary-font: "oliver";
+
+    --primary-color: #006afa;
+    --secondary-color: #0f172a;
+    --tertiary-colore: #fffdfa;
+
+    --section-spacing: 32px;
+    --section-margin: 8px;
+    --inner-padding: 8px;
+    --text-spacing: 1em;
+  }
+</style>
