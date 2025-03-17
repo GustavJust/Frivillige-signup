@@ -605,7 +605,8 @@
     margin: 0;
 
     > h1 {
-      font-size: 160px;
+      font-size: 180px;
+      font-weight: 1500;
       line-height: 0;
       writing-mode: vertical-rl;
       transform: rotate(180deg) translateX(-50%); /* Rotates text 180 degrees */
@@ -622,7 +623,7 @@
     > .heartstring {
       display: flex;
       flex-direction: column;
-      gap: 2em;
+      gap: 3em;
       margin-top: 2em;
     }
     > .give-heart-graphic {
@@ -631,5 +632,17 @@
   }
 
   .heartstring {
+    > :nth-child(2) {
+      transform: translateX(-100%);
+    }
+    > :nth-child(4) {
+      transform: translateX(100%);
+    }
+    > :nth-child(5) {
+      transform: translateX(200%);
+    }
+    > :nth-child(6) {
+      transform: translateX(250%);
+    }
   }
 </style>
