@@ -11,14 +11,14 @@ import Footer from "../components/footer.astro";
 ---
 
 <Layout>
-  <Header />
-  <Intro />
-  <Opgaver />
-  <Stories />
-  <Faq />
-  <Cta />
-  <Kort />
-  <Footer />
+  <section class="hero"><Header /></section>
+  <section class="intro"><Intro /></section>
+  <section class="opgaver"><Opgaver /></section>
+  <section class="stories"><Stories /></section>
+  <section class="faq"><Faq /></section>
+  <section class="cta"><Cta /></section>
+  <section class="map"><Kort /></section>
+  <section class="footer"><Footer /></section>
 </Layout>
 
 <style>
@@ -91,13 +91,16 @@ import Footer from "../components/footer.astro";
     --secondary-font: "oliver";
 
     --primary-color: #006afa;
-    --text-subdued-primary: #343434;
     --secondary-color: #0f172a;
-    --text-subdued-secondary: #fffdfa;
     --tertiary-color: #fffdfa;
     --accent-color: #fd9215;
 
-    --section-spacing: 32px;
+    --text-base-white: #ffffff;
+    --text-base-dark: #000000;
+    --text-subdued-primary: #343434;
+    --text-subdued-secondary: #fffdfa;
+
+    --section-spacing: 64px;
     --section-margin: 8px;
     --inner-padding: 8px;
     --text-spacing: 1em;
@@ -111,5 +114,37 @@ import Footer from "../components/footer.astro";
     font-family: var(--primary-font), sans-serif;
     margin: 0;
     overflow-x: hidden;
+  }
+
+  section {
+    padding: 0 var(--section-margin) var(--section-spacing)
+      var(--section-margin);
+  }
+
+  body {
+    > .hero {
+      background-color: var(--tertiary-color);
+    }
+    > .intro {
+      background-color: var(--primary-color);
+    }
+    > .opgaver {
+      background-color: var(--tertiary-color);
+    }
+    > .stories {
+      background-color: var(--secondary-color);
+    }
+    > .faq {
+      background-color: var(--primary-color);
+    }
+    > .cta {
+      background-color: var(--tertiary-color);
+    }
+    > .map {
+      background-color: var(--secondary-color);
+    }
+    > .footer {
+      background-color: var(--secondary-color);
+    }
   }
 </style>

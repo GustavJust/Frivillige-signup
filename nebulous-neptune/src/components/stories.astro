@@ -3,8 +3,12 @@ import HeadersLayout from "./headers_layout.astro";
 import Story from "./story.astro";
 ---
 
-<section>
-  <HeadersLayout overskrift="Hvad andre siger" desc="" />
+<div>
+  <HeadersLayout
+    overskrift="Hvad andre siger"
+    desc=""
+    color="var(--text-base-white)"
+  />
   <Story
     img="/assets/imgs/morten.png"
     alt="picture of morten"
@@ -31,5 +35,5 @@ import Story from "./story.astro";
     startYear="2021"
     branch="Yoga, Træning og Massage"
   />
-</section>
+</div>
 <style></style>
