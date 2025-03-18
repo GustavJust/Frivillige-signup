@@ -1,1 +1,32 @@
-<h2>Faq</h2>
+---
+import HeadersLayout from "./headers_layout.astro";
+---
+
+<section>
+  <HeadersLayout overskrift="Hvad kræver det?" desc="" />
+
+  <ol>
+    <li>Lyst</li>
+    <li>
+      Du har overskud til at rumme hjemløse/socialt udsatte og deres problemer
+    </li>
+    <li>Du ser muligheder i alle mennesker</li>
+    <li>
+      Du møder brugerne i øjenhøjde med respekt, værdighed, åbenhed og
+      tolerance.
+    </li>
+  </ol>
+</section>
+
+<style>
+  ol {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    > li {
+      -webkit-text-stroke: 2px var(--primary-color); /* Adds a thin black outline */
+      color: var(--primary-color); /* Adjust for readability */
+      font-size: 2em;
+    }
+  }
+</style>
