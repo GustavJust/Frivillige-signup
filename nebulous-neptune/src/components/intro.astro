@@ -6,11 +6,11 @@ import Button from "./button.astro";
 <section>
   <HeadersLayout overskrift="Vil du være frivilig?" desc="" color="#ffffff" />
 
-  <div>
+  <div class="content-container">
     <div class="center">
       <img src="public/assets/imgs/cooking-drawing.png" alt="cooking" />
     </div>
-    <p>
+    <p class="text-container">
       Lorem ipsum dolor sit amet consectetur. Arcu massa lorem quis egestas in eu lobortis cursus mi.. Commodo sagittis fringilla et etiam. Velit cursus sollicitudin sodales urna sapien non accumsan amet.. Purus ultrices libero tellus natoque. Mauris
       adipiscing sed lorem elementum. At mi porta lectus sit consectetur.. Varius ipsum suspendisse mauris eu posuere felis at congue dolor..
     </p>
@@ -30,14 +30,6 @@ import Button from "./button.astro";
     font-size: var(--text-size);
   }
 
-  h3 {
-    font-family: var(--primary-font);
-    margin: var(--section-margin);
-    padding: var(--inner-padding);
-    font-size: var(--overskrift-size);
-    color: var(--tertiary-colore);
-  }
-
   section {
     background-color: var(--primary-color);
   }
@@ -46,5 +38,14 @@ import Button from "./button.astro";
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+    margin-bottom: 20px; /* Space between content and button */
   }
 </style>
