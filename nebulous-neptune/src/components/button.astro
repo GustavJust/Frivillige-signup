@@ -1,27 +1,14 @@
+---
+const { text = "button", stroke = "#FFFDFA", fill = "none" } = Astro.props;
+---
+
 <a href="Button" class="button"
-  ><svg
-    width="212"
-    height="50"
-    viewBox="0 0 212 50"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  ><svg width="212" height="50" viewBox="0 0 212 50" fill={fill} xmlns="http://www.w3.org/2000/svg">
     <path
       d="M56.8115 7.37097C60.9329 7.37097 76.9811 5.74 80.9982 6.61364C99.3704 6.61364 121.089 2.06966 138.949 2.06966C148.773 2.06966 158.891 1.67007 168.411 2.78492C174.904 3.54534 180.068 3.45801 186.486 5.26728C192.487 6.95907 196.703 9.95911 201.852 12.6723C210.168 17.0547 211.75 23.2617 209.646 30.4695C207.463 37.9456 197.512 40.1513 189.691 42.7972C180.566 45.8844 169.362 45.9948 159.346 45.9948H132.538C127.9 45.9948 123.644 46.7521 119.051 46.7521C116.031 46.7521 109.787 46.8203 107.111 47.6777C102.289 49.2233 94.8641 48.2668 89.6446 48.2668H73.7808C62.7699 48.2668 51.6731 48.5888 40.6714 48.2668C30.1775 47.9595 17.4571 45.0228 8.11468 41.0721C1.20303 38.1493 -0.329074 28.686 3.63744 23.7798C6.98419 19.6401 9.7761 11.9323 17.0139 10.3582C20.7579 9.54397 23.941 6.61364 28.511 6.61364H42.4402C47.336 6.61364 51.7959 7.37097 56.8115 7.37097Z"
-      stroke="#FFFDFA"
+      stroke={stroke}
       stroke-width="2.06931"></path>
-    <text
-      x="50%"
-      y="50%"
-      text-anchor="middle"
-      dominant-baseline="middle"
-      font-size="16"
-      font-weight="900"
-      font-family="var(--primary-font)"
-      fill="var(--primary-color)"
-    >
-      Læs mere</text
-    >
+    <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-size="16" font-weight="900" font-family="var(--primary-font)" fill={stroke}> {text}</text>
   </svg>
 </a>
 
@@ -30,11 +17,11 @@
     display: flex;
     justify-content: center;
   }
-  svg {
+  /* svg {
     > path {
       stroke: var(--primary-color);
     }
-  }
+  } */
   a:hover {
     > svg {
       fill: var(--primary-color);

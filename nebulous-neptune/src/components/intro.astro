@@ -1,5 +1,6 @@
 ---
 import HeadersLayout from "./headers_layout.astro";
+import Button from "./button.astro";
 ---
 
 <section>
@@ -16,17 +17,17 @@ import HeadersLayout from "./headers_layout.astro";
   </div>
 
   <div>
-    <!-- CTA -->
+    <Button text="button" stroke="white" fill="none" />
   </div>
 </section>
 
 <style>
   p {
+    color: white;
     font-family: var(--primary-font);
     margin: var(--section-margin);
     padding: var(--inner-padding);
     font-size: var(--text-size);
-    color: var(--tertiary-colore);
   }
 
   h3 {
