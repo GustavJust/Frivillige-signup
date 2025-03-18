@@ -5,8 +5,11 @@
   <div class="fullscreen-menu">
     <ul>
       <li><a href="index.html">Home</a></li>
+      <br />
       <li><a href="produktside.html">Shop</a></li>
+      <br />
       <li><a href="about.html">About</a></li>
+      <br />
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </div>
@@ -19,6 +22,8 @@
   }
 
   .burger-menu {
+    color: var(--primary-color);
+    position: relative;
     z-index: 1000;
     cursor: pointer;
     font-size: 2rem;
@@ -26,14 +31,16 @@
     align-items: center;
     justify-content: center;
     height: 100%;
-    margin-top: -6px;
-    margin-right: 0.5rem;
+    background-color: white;
+    /* border: 2px solid var(--primary-color); */
+    border-radius: 9999px;
+    aspect-ratio: 1/1;
   }
 
   /* Fullscreen menu (hidden by default) */
   .fullscreen-menu {
     position: fixed;
-    top: 50px;
+    top: 0px;
     left: 0px;
     width: 100vw;
     height: calc(100vh); /* Take up remaining space */
@@ -73,6 +80,10 @@
   .fullscreen-menu ul li a {
     text-decoration: none;
     transition: color 0s;
+    font-size: 2em;
+    color: var(--primary-color);
+    font-family: var(--primary-font);
+    font-weight: 1000;
   }
 
   .fullscreen-menu ul li a:hover {
