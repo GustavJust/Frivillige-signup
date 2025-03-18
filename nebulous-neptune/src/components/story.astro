@@ -1,11 +1,24 @@
 ---
-const { img = "Inset path to pic", alt = "write a alt", name = "Inset name here", story = "Inset story here", startYear = "inset year here", branch = "inset branch here" } = Astro.props;
+const {
+  img = "Inset path to pic",
+  alt = "write a alt",
+  name = "Inset name here",
+  story = "Inset story here",
+  startYear = "inset year here",
+  branch = "inset branch here",
+} = Astro.props;
 ---
 
 <div class="story_card">
   <div class="image_container">
     <img src={img} alt={alt} />
-    <svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width="400"
+      height="400"
+      viewBox="0 0 400 400"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M397.744 178.871C397.744 156.535 397.744 134.198 397.744 111.862C397.744 101.506 397.744 94.0341 397.744 83.6295C397.744 69.8255 395.044 67.0207 394.315 53.421C394.102 49.4572 397.744 33.1354 397.744 28.8982C397.744 24.9872 394.315 10.6557 394.315 6.56119C394.315 -2.52956 380.425 6.79864 373.672 6.56183C349.763 5.72343 325.308 4.43455 301.334 4.43455C294.132 4.43455 286.93 4.43455 279.728 4.43455C270.974 4.43455 263.256 5.03175 254.531 5.38871C247.814 5.66351 240.152 5.38871 233.539 5.38871C229.247 5.38871 226.962 5.60294 223.044 5.38917C219.457 5.19352 214.57 5.38917 210.64 5.38917C201.627 5.38917 193.374 5.24425 184.4 5.38871C171.361 5.59859 158.156 3.72519 145.28 5.38871C133.421 6.92079 131.923 5.38871 119.995 5.38871C115.319 5.38871 112.838 5.38866 99.48 5.38866C92.3239 5.38866 89.9924 5.38888 84.2135 5.38888C77.0156 3.21426 62.4571 -0.380949 55.1117 5.38888C53.8559 6.37531 35.0744 3.47991 27.4412 3.48003C19.8079 3.48019 15.0371 5.38875 5.0184 5.3889C2.32645 8.03208 3.43585 32.0548 3.43585 35.9216C3.43585 42.7521 1.29837 47.3348 3.43579 53.421C8.11961 66.758 1.45096 84.884 5.01859 98.896C8.15937 111.232 6.68559 121.753 6.68559 134.677C6.68559 147.27 7.76885 160.294 7.76885 172.903C7.76885 180.077 6.68559 185.008 6.68559 191.926C6.68559 200.108 5.60232 209.362 5.60232 217.694C5.60232 230.337 6.68559 242.888 6.68559 255.926C6.68559 264.018 6.14489 271.924 5.6625 279.976C5.06266 289.989 3.39437 304.234 6.14396 313.953C9.1181 324.466 6.68559 335.865 6.68559 346.808C6.68559 352.343 6.68559 357.878 6.68559 363.412C6.68559 371.259 2.36059 386.202 4.06443 393.731C5.5228 400.174 21.3202 395.91 26.726 394.731C32.8787 393.388 36.3607 395.689 42.7078 394.731C49.4265 393.716 54.1368 393.505 61.3139 394.731C75.559 397.163 90.5481 396.917 105.263 396.917C112.392 396.917 118.057 396.917 125.242 396.917C131.082 396.917 139.016 395.97 144.803 396.917C157.156 398.939 171.271 394.79 184.401 394.79C193.871 394.79 204.591 396.213 213.83 393.726C218.014 392.6 219.999 394.79 223.998 394.79C229.254 394.79 234.486 393.726 239.741 393.726C255.83 393.726 275.069 397.156 290.789 393.726C297.971 392.159 304.88 393.726 312.257 393.726C319.892 393.726 327.453 393.726 334.915 393.726"
         stroke="#FFFDFA"
@@ -18,13 +31,43 @@ const { img = "Inset path to pic", alt = "write a alt", name = "Inset name here"
     <div class="text_container">
       <div class="story_container">
         <p>{story}</p>
-        <svg width="18" height="27" viewBox="0 0 18 27" fill="none" xmlns="http://www.w3.org/2000/svg" class="quote_start">
-          <path d="M2.07839 2.36426C2.07839 9.81489 1.10744 19.2154 6 25.3643" stroke="#006AFA" stroke-width="3" stroke-linecap="round"></path>
-          <path d="M15.6799 2.36426C12.1578 11.3719 12.0559 16.4255 15.6799 25.4298" stroke="#006AFA" stroke-width="3" stroke-linecap="round"></path>
+        <svg
+          width="18"
+          height="27"
+          viewBox="0 0 18 27"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="quote_start"
+        >
+          <path
+            d="M2.07839 2.36426C2.07839 9.81489 1.10744 19.2154 6 25.3643"
+            stroke="#006AFA"
+            stroke-width="3"
+            stroke-linecap="round"></path>
+          <path
+            d="M15.6799 2.36426C12.1578 11.3719 12.0559 16.4255 15.6799 25.4298"
+            stroke="#006AFA"
+            stroke-width="3"
+            stroke-linecap="round"></path>
         </svg>
-        <svg width="20" height="25" viewBox="0 0 20 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="quote_end">
-          <path d="M3.3505 2.36426C3.3505 2.36426 7.84294 12.4185 2 23.3643" stroke="#006AFA" stroke-width="3" stroke-linecap="round"></path>
-          <path d="M16 5.36426C16 5.36426 20.5 15.1353 16 21.3643" stroke="#006AFA" stroke-width="3" stroke-linecap="round"></path>
+        <svg
+          width="20"
+          height="25"
+          viewBox="0 0 20 25"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="quote_end"
+        >
+          <path
+            d="M3.3505 2.36426C3.3505 2.36426 7.84294 12.4185 2 23.3643"
+            stroke="#006AFA"
+            stroke-width="3"
+            stroke-linecap="round"></path>
+          <path
+            d="M16 5.36426C16 5.36426 20.5 15.1353 16 21.3643"
+            stroke="#006AFA"
+            stroke-width="3"
+            stroke-linecap="round"></path>
         </svg>
       </div>
     </div>
@@ -39,8 +82,8 @@ const { img = "Inset path to pic", alt = "write a alt", name = "Inset name here"
   h3 {
     font-size: 3em;
     font-weight: bolder;
-    -webkit-text-stroke: 2px black; /* Adds a thin black outline */
-    color: black; /* Adjust for readability */
+    -webkit-text-stroke: 2px var(--text-base-white); /* Adds a thin black outline */
+    color: var(--text-base-white); /* Adjust for readability */
     margin: calc(var(--text-spacing) / 2) 0 calc(var(--text-spacing) / 3) 0;
   }
   .story_card {
@@ -70,7 +113,7 @@ const { img = "Inset path to pic", alt = "write a alt", name = "Inset name here"
     }
 
     > svg path {
-      stroke: var(--primary-color);
+      stroke: var(--text-base-white);
     }
   }
 
@@ -83,6 +126,7 @@ const { img = "Inset path to pic", alt = "write a alt", name = "Inset name here"
   .story_container {
     position: relative;
     > p {
+      color: var(--text-base-white);
       position: relative;
       font-size: 1.2em;
     }
@@ -90,6 +134,10 @@ const { img = "Inset path to pic", alt = "write a alt", name = "Inset name here"
       position: absolute;
       top: 0;
       left: -4%;
+    }
+    > .quote_start path,
+    .quote_end path {
+      stroke: var(--accent-color);
     }
     > .quote_end {
       position: absolute;
@@ -99,7 +147,7 @@ const { img = "Inset path to pic", alt = "write a alt", name = "Inset name here"
   }
   .info_container {
     > p {
-      color: var(--text-subdued-primary);
+      color: var(--text-subdued-secondary);
       font-size: 0.9em;
       padding: 0 calc(var(--inner-padding) * 2.1);
     }

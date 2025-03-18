@@ -44,7 +44,7 @@ const {
   <div class="drop_content">
     <h4>{subheader}</h4>
     <p>{desc}</p>
-    <Button />
+    <Button text="Læs mere" stroke="var(--primary-color)" fill="none" />
     <br />
   </div>
 </div>
@@ -68,6 +68,7 @@ const {
 
     > p {
       margin: 0 0 2em 0;
+      color: var(--text-base-dark);
     }
 
     > .drop_content {
@@ -90,8 +91,8 @@ const {
   }
   h3,
   h4 {
-    -webkit-text-stroke: 0.5px black; /* Adds a thin black outline */
-    color: black; /* Adjust for readability */
+    -webkit-text-stroke: 0.5px var(--text-base-dark); /* Adds a thin black outline */
+    color: var(--text-base-dark); /* Adjust for readability */
     margin: 0;
   }
   h4 {

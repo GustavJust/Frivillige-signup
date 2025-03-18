@@ -3,7 +3,7 @@ import HeadersLayout from "./headers_layout.astro";
 import Button from "./button.astro";
 ---
 
-<section>
+<div class="intro_section">
   <HeadersLayout overskrift="Vil du være frivilig?" desc="" color="#ffffff" />
 
   <div>
@@ -11,19 +11,23 @@ import Button from "./button.astro";
       <img src="public/assets/imgs/cooking-drawing.png" alt="cooking" />
     </div>
     <p>
-      Lorem ipsum dolor sit amet consectetur. Arcu massa lorem quis egestas in eu lobortis cursus mi.. Commodo sagittis fringilla et etiam. Velit cursus sollicitudin sodales urna sapien non accumsan amet.. Purus ultrices libero tellus natoque. Mauris
-      adipiscing sed lorem elementum. At mi porta lectus sit consectetur.. Varius ipsum suspendisse mauris eu posuere felis at congue dolor..
+      Lorem ipsum dolor sit amet consectetur. Arcu massa lorem quis egestas in
+      eu lobortis cursus mi.. Commodo sagittis fringilla et etiam. Velit cursus
+      sollicitudin sodales urna sapien non accumsan amet.. Purus ultrices libero
+      tellus natoque. Mauris adipiscing sed lorem elementum. At mi porta lectus
+      sit consectetur.. Varius ipsum suspendisse mauris eu posuere felis at
+      congue dolor..
     </p>
   </div>
 
   <div>
     <Button text="button" stroke="white" fill="none" />
   </div>
-</section>
+</div>
 
 <style>
   p {
-    color: white;
+    color: var(--text-base-white);
     font-family: var(--primary-font);
     margin: var(--section-margin);
     padding: var(--inner-padding);
@@ -38,7 +42,7 @@ import Button from "./button.astro";
     color: var(--tertiary-colore);
   }
 
-  section {
+  .intro_section {
     background-color: var(--primary-color);
   }
 

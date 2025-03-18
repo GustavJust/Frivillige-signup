@@ -2,8 +2,12 @@
 import HeadersLayout from "./headers_layout.astro";
 ---
 
-<section>
-  <HeadersLayout overskrift="Hvad kræver det?" desc="" />
+<div>
+  <HeadersLayout
+    overskrift="Hvad kræver det?"
+    desc=""
+    color="var(--text-base-white)"
+  />
 
   <ol>
     <li>Lyst</li>
@@ -16,7 +20,7 @@ import HeadersLayout from "./headers_layout.astro";
       tolerance.
     </li>
   </ol>
-</section>
+</div>
 
 <style>
   ol {
@@ -24,8 +28,8 @@ import HeadersLayout from "./headers_layout.astro";
     flex-direction: column;
     gap: 2em;
     > li {
-      -webkit-text-stroke: 2px var(--primary-color); /* Adds a thin black outline */
-      color: var(--primary-color); /* Adjust for readability */
+      -webkit-text-stroke: 2px var(--text-base-white); /* Adds a thin black outline */
+      color: var(--text-base-white); /* Adjust for readability */
       font-size: 2em;
     }
   }

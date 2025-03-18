@@ -3,8 +3,12 @@ import HeadersLayout from "./headers_layout.astro";
 import Afdelinger from "./afdelinger.astro";
 ---
 
-<section>
-  <HeadersLayout overskrift="Hvor kan du finde os?" desc="" />
+<div>
+  <HeadersLayout
+    overskrift="Hvor kan du finde os?"
+    desc=""
+    color="var(--text-base-white)"
+  />
   <div class="map_container">
     <svg
       width="368"
@@ -184,7 +188,7 @@ import Afdelinger from "./afdelinger.astro";
       </svg>
     </button>
   </div>
-</section>
+</div>
 
 <style>
   .map_container {

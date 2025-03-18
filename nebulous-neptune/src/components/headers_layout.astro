@@ -4,7 +4,7 @@ const {
   desc = "Default Desc",
   stroke = "#FD9215",
   stroke2 = "none",
-  color = "black",
+  color = "var(--text-base-dark)",
 } = Astro.props;
 ---
 
@@ -54,19 +54,20 @@ const {
 
     > .moon {
       position: absolute;
-      z-index: -1;
+      z-index: 1;
       scale: 0.4;
       top: -30%;
       left: 60%;
     }
     > .heart {
       position: absolute;
-      z-index: -1;
+      z-index: 1;
       scale: 4;
-      top: -30%;
+      top: -10%;
       left: 80%;
     }
     > h2 {
+      position: relative;
       color: var(--heading-color) !important;
 
       font-size: 4.5em;
@@ -75,6 +76,7 @@ const {
       margin: 0;
       -webkit-text-stroke: 2px var(--heading-color) !important ; /* Adds a thin black outline */
       color: black; /* Adjust for readability */
+      z-index: 2;
     }
 
     > p {
