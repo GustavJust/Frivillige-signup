@@ -4,7 +4,7 @@ const {
   desc = "Default Desc",
   stroke = "#FD9215",
   stroke2 = "none",
-  color="black",
+  color = "black",
 } = Astro.props;
 ---
 
@@ -44,7 +44,7 @@ const {
       stroke-linecap="round"></path>
   </svg>
 
-  <h2>{overskrift}</h2>
+  <h2 style={`--heading-color: ${color};`}>{overskrift}</h2>
   <p>{desc}</p>
 </div>
 
@@ -67,12 +67,13 @@ const {
       left: 80%;
     }
     > h2 {
+      color: var(--heading-color) !important;
+
       font-size: 4.5em;
       line-height: 1;
       font-weight: bolder;
-      color: {color};
       margin: 0;
-      -webkit-text-stroke: 2px black; /* Adds a thin black outline */
+      -webkit-text-stroke: 2px var(--heading-color) !important ; /* Adds a thin black outline */
       color: black; /* Adjust for readability */
     }
 
