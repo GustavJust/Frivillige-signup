@@ -95,7 +95,7 @@ import Button from "./button.astro";
 
     .text-container {
       flex: 1; /* Text takes up 1 part of the space */
-      margin-right: 20px; /* Small space between text and image */
+      margin-right: 30px; /* Small space between text and image */
       margin-top: 20px;
     }
 
@@ -115,7 +115,23 @@ import Button from "./button.astro";
     .button-container {
       justify-content: flex-start; /* Move button to the left */
       margin-top: 20px; /* Space between content and button */
-      padding-left: 20%;
+      padding-left: 25%;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .button-container {
+      justify-content: flex-start; /* Move button to the left */
+      margin-top: 20px; /* Space between content and button */
+      padding-right: 25%;
+    }
+  }
+
+  @media (min-width: 1247px) {
+    .button-container {
+      justify-content: flex-start; /* Move button to the left */
+      margin-top: 20px; /* Space between content and button */
+      padding-right: 15%;
     }
   }
 
