@@ -20,7 +20,7 @@ import Button from "./button.astro";
 
     <!-- Image -->
     <div class="image-container">
-      <img src="public/assets/imgs/cooking-drawing.png" alt="cooking" />
+      <img src="/assets/imgs/cooking-drawing.png" alt="cooking" />
     </div>
   </div>
 
@@ -113,7 +113,6 @@ import Button from "./button.astro";
     }
 
     .button-container {
-      justify-content: flex-start; /* Move button to the left */
       margin-top: 20px; /* Space between content and button */
       padding-left: 25%;
     }
@@ -127,14 +126,13 @@ import Button from "./button.astro";
     }
   }
 
-  @media (min-width: 1247px) {
+  @media (min-width: 1260px) {
     .button-container {
       justify-content: flex-start; /* Move button to the left */
       margin-top: 20px; /* Space between content and button */
-      padding-right: 15%;
+      padding-right: 10%;
     }
   }
-
   .fade {
     background: rgb(255, 255, 255);
     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(0, 106, 250, 1) 100%);
