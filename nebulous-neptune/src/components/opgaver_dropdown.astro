@@ -2,7 +2,13 @@
 import Button from "./button.astro";
 // import FAQScript from "../../public/scripts/faq.js";
 
-const { overskrift = "Default Overskrift", desc = "Default Desc", imgSrc, imgAlt, subheader = "Default Subheader" } = Astro.props;
+const {
+  overskrift = "Default Overskrift",
+  desc = "Default Desc",
+  imgSrc,
+  imgAlt,
+  subheader = "Default Subheader",
+} = Astro.props;
 ---
 
 <div class="drop_menu">
@@ -10,10 +16,28 @@ const { overskrift = "Default Overskrift", desc = "Default Desc", imgSrc, imgAlt
   <div class="drop_collapse">
     <h3>{overskrift}</h3>
     <button class="faq-toggle">
-      <svg width="16" height="31" viewBox="0 0 16 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M7.36008 1.94336C8.16631 9.97708 8.1958 17.9447 8.1958 26.0007" stroke="#006AFA" stroke-width="2.86399" stroke-linecap="round"></path>
-        <path d="M13.6279 20.8604C12.7928 22.504 11.5801 24.0416 10.5752 25.5896C9.76708 26.8343 8.80869 27.6593 7.77776 28.6738" stroke="#006AFA" stroke-width="2.86399" stroke-linecap="round"></path>
-        <path d="M7.98682 28.2628C5.71442 25.691 3.78539 22.9554 1.71879 20.2437" stroke="#006AFA" stroke-width="2.86399" stroke-linecap="round"></path>
+      <svg
+        width="16"
+        height="31"
+        viewBox="0 0 16 31"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M7.36008 1.94336C8.16631 9.97708 8.1958 17.9447 8.1958 26.0007"
+          stroke="#006AFA"
+          stroke-width="2.86399"
+          stroke-linecap="round"></path>
+        <path
+          d="M13.6279 20.8604C12.7928 22.504 11.5801 24.0416 10.5752 25.5896C9.76708 26.8343 8.80869 27.6593 7.77776 28.6738"
+          stroke="#006AFA"
+          stroke-width="2.86399"
+          stroke-linecap="round"></path>
+        <path
+          d="M7.98682 28.2628C5.71442 25.691 3.78539 22.9554 1.71879 20.2437"
+          stroke="#006AFA"
+          stroke-width="2.86399"
+          stroke-linecap="round"></path>
       </svg>
     </button>
   </div>
@@ -29,7 +53,7 @@ const { overskrift = "Default Overskrift", desc = "Default Desc", imgSrc, imgAlt
     </div>
   </div>
 </div>
-<script src="../../public/scripts/faq.js" defer></script>
+<script src="/scripts/faq.js" defer></script>
 
 <style>
   button {
