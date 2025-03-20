@@ -1,5 +1,6 @@
 ---
 import Button from "./button.astro";
+// import FAQScript from "../../public/scripts/faq.js";
 
 const {
   overskrift = "Default Overskrift",
@@ -14,42 +15,52 @@ const {
   <hr />
   <div class="drop_collapse">
     <h3>{overskrift}</h3>
-    <svg
-      width="16"
-      height="31"
-      viewBox="0 0 16 31"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M7.36008 1.94336C8.16631 9.97708 8.1958 17.9447 8.1958 26.0007"
-        stroke="#006AFA"
-        stroke-width="2.86399"
-        stroke-linecap="round"></path>
-      <path
-        d="M13.6279 20.8604C12.7928 22.504 11.5801 24.0416 10.5752 25.5896C9.76708 26.8343 8.80869 27.6593 7.77776 28.6738"
-        stroke="#006AFA"
-        stroke-width="2.86399"
-        stroke-linecap="round"></path>
-      <path
-        d="M7.98682 28.2628C5.71442 25.691 3.78539 22.9554 1.71879 20.2437"
-        stroke="#006AFA"
-        stroke-width="2.86399"
-        stroke-linecap="round"></path>
-    </svg>
+    <button class="faq-toggle">
+      <svg
+        width="16"
+        height="31"
+        viewBox="0 0 16 31"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M7.36008 1.94336C8.16631 9.97708 8.1958 17.9447 8.1958 26.0007"
+          stroke="#006AFA"
+          stroke-width="2.86399"
+          stroke-linecap="round"></path>
+        <path
+          d="M13.6279 20.8604C12.7928 22.504 11.5801 24.0416 10.5752 25.5896C9.76708 26.8343 8.80869 27.6593 7.77776 28.6738"
+          stroke="#006AFA"
+          stroke-width="2.86399"
+          stroke-linecap="round"></path>
+        <path
+          d="M7.98682 28.2628C5.71442 25.691 3.78539 22.9554 1.71879 20.2437"
+          stroke="#006AFA"
+          stroke-width="2.86399"
+          stroke-linecap="round"></path>
+      </svg>
+    </button>
   </div>
-  <div class="image_container">
-    <img src={imgSrc} alt={imgAlt} class="dropdown-img" />
-  </div>
-  <div class="drop_content">
-    <h4>{subheader}</h4>
-    <p>{desc}</p>
-    <Button text="Læs mere" stroke="var(--primary-color)" fill="none" />
-    <br />
+  <div class="faq-content">
+    <div class="image_container">
+      <img src={imgSrc} alt={imgAlt} class="dropdown-img" />
+    </div>
+    <div class="drop_content">
+      <h4>{subheader}</h4>
+      <p>{desc}</p>
+      <Button text="Læs mere" stroke="var(--primary-color)" fill="none" />
+      <br />
+    </div>
   </div>
 </div>
+<script src="../../public/scripts/faq.js" defer></script>
 
 <style>
+  button {
+    background-color: transparent;
+    border: none;
+    color: transparent;
+  }
   hr {
     border: 1px solid var(--primary-color);
     width: 100%;
@@ -96,6 +107,21 @@ const {
     margin: 0;
   }
   h4 {
-    margin: 0 0 var(--text-spacing) 0;
+    margin: var(--text-spacing) 0;
+  }
+  .faq-content {
+    max-height: 0; /* Start hidden */
+    overflow: hidden;
+    transition:
+      max-height 0.3s ease-in-out,
+      padding 0.3s ease-in-out;
+    padding: 0; /* Remove padding when hidden */
+    opacity: 0;
+  }
+
+  .faq-content.show {
+    max-height: 500px; /* Set a high enough value */
+    padding: var(--inner-padding);
+    opacity: 1;
   }
 </style>
