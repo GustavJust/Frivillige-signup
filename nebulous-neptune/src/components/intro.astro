@@ -3,7 +3,105 @@ import HeadersLayout from "./headers_layout.astro";
 import Button from "./button.astro";
 ---
 
+<section>
+  <!-- Header -->
+  <HeadersLayout overskrift="Vil du være frivillig?" desc="" color="#ffffff" />
+
+  <!-- Content Container -->
+  <div class="content-container">
+    <!-- Text -->
+    <div class="text-container">
+      <p>
+        Lorem ipsum dolor sit amet consectetur. Arcu massa lorem quis egestas in eu lobortis cursus mi.. Commodo sagittis fringilla et etiam. Velit cursus sollicitudin sodales urna sapien non accumsan amet.. Purus ultrices libero tellus natoque.
+        Mauris adipiscing sed lorem elementum. At mi porta lectus sit consectetur.. Varius ipsum suspendisse mauris eu posuere felis at congue dolor..
+      </p>
+    </div>
+
+    <!-- Image -->
+    <div class="image-container">
+      <img src="public/assets/imgs/cooking-drawing.png" alt="cooking" />
+    </div>
+  </div>
+
+  <!-- Button -->
+  <div class="button-container">
+    <Button text="Bliv frivillig" stroke="white" fill="none" />
+  </div>
+</section>
+
+<style>
+  /* Mobile-First Styles */
+  section {
+    background-color: var(--primary-color);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Space between text and image */
+  }
+
+  .text-container {
+    width: 100%;
+  }
+
+  p {
+    color: white;
+    font-family: var(--primary-font);
+    font-size: var(--text-size);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Space between content and button */
+  }
+
+  /* Desktop Styles (Screen Width > 768px) */
+  @media (min-width: 768px) {
+    .content-container {
+      flex-direction: row; /* Text on the left, image on the right */
+      justify-content: space-between;
+      align-items: flex-start;
+      max-width: 1200px; /* Limit width for larger screens */
+    }
+
+    .text-container {
+      flex: 1;
+      margin-right: 20px; /* Space between text and image */
+    }
+
+    .image-container {
+      flex: 1;
+      justify-content: flex-end; /* Align image to the right */
+    }
+  }
+</style>
+
+<!-- 
+
 <div class="intro_section">
+  <div class="fade"><br /></div>
   <HeadersLayout overskrift="Vil du være frivilig?" desc="" color="#ffffff" />
 
   <div>
@@ -11,17 +109,13 @@ import Button from "./button.astro";
       <img src="public/assets/imgs/cooking-drawing.png" alt="cooking" />
     </div>
     <p>
-      Lorem ipsum dolor sit amet consectetur. Arcu massa lorem quis egestas in
-      eu lobortis cursus mi.. Commodo sagittis fringilla et etiam. Velit cursus
-      sollicitudin sodales urna sapien non accumsan amet.. Purus ultrices libero
-      tellus natoque. Mauris adipiscing sed lorem elementum. At mi porta lectus
-      sit consectetur.. Varius ipsum suspendisse mauris eu posuere felis at
-      congue dolor..
+      Lorem ipsum dolor sit amet consectetur. Arcu massa lorem quis egestas in eu lobortis cursus mi.. Commodo sagittis fringilla et etiam. Velit cursus sollicitudin sodales urna sapien non accumsan amet.. Purus ultrices libero tellus natoque. Mauris
+      adipiscing sed lorem elementum. At mi porta lectus sit consectetur.. Varius ipsum suspendisse mauris eu posuere felis at congue dolor..
     </p>
   </div>
 
   <div>
-    <Button text="button" stroke="white" fill="none" />
+    <Button text="Bliv frivillig her" stroke="white" fill="none" />
   </div>
 </div>
 
@@ -51,4 +145,9 @@ import Button from "./button.astro";
     justify-content: center;
     align-items: center;
   }
-</style>
+
+  .fade {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(0, 106, 250, 1) 73%);
+  }
+</style> -->
