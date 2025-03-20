@@ -3,7 +3,8 @@ import HeadersLayout from "./headers_layout.astro";
 import Button from "./button.astro";
 ---
 
-<section>
+<div class="sektion-intro">
+  <div class="fade"></div>
   <!-- Header -->
   <HeadersLayout overskrift="Vil du være frivillig?" desc="" color="#ffffff" />
 
@@ -27,12 +28,12 @@ import Button from "./button.astro";
   <div class="button-container">
     <Button text="Bliv frivillig" stroke="white" fill="none" />
   </div>
-</section>
+  <div class="fade_ned"></div>
+</div>
 
 <style>
   /* Mobile-First Styles */
-  section {
-    background-color: var(--primary-color);
+  .sektion-intro {
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -44,7 +45,7 @@ import Button from "./button.astro";
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* Space between text and image */
+    gap: 10px; /* Reduced space between text and image */
   }
 
   .text-container {
@@ -79,25 +80,63 @@ import Button from "./button.astro";
 
   /* Desktop Styles (Screen Width > 768px) */
   @media (min-width: 768px) {
+    section {
+      padding: 0; /* Remove padding to eliminate space on the sides */
+    }
+
     .content-container {
       flex-direction: row; /* Text on the left, image on the right */
       justify-content: space-between;
       align-items: flex-start;
       max-width: 1200px; /* Limit width for larger screens */
+      margin: 0 auto; /* Center the container */
+      gap: 20px; /* Reduced space between text and image */
     }
 
     .text-container {
-      flex: 1;
-      margin-right: 20px; /* Space between text and image */
+      flex: 1; /* Text takes up 1 part of the space */
+      margin-right: 20px; /* Small space between text and image */
+      margin-top: 20px;
     }
 
     .image-container {
-      flex: 1;
+      flex: 1; /* Image takes up 1 part of the space */
       justify-content: flex-end; /* Align image to the right */
+      margin-top: 60px;
+      padding-right: 20%;
+    }
+
+    img {
+      max-width: 90%; /* Make the image larger */
+      height: auto;
+      transform: scale(1.5);
+    }
+
+    .button-container {
+      justify-content: flex-start; /* Move button to the left */
+      margin-top: 20px; /* Space between content and button */
+      padding-left: 20%;
     }
   }
-</style>
 
+  .fade {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(0, 106, 250, 1) 100%);
+    width: 2400px;
+    margin-left: -100px;
+    height: 30px;
+    margin-top: -50px;
+  }
+
+  .fade_ned {
+    background: rgb(0, 106, 250);
+    background: linear-gradient(180deg, rgba(0, 106, 250, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    width: 2400px;
+    margin-left: -100px;
+    margin-bottom: -85px;
+    height: 50px;
+  }
+</style>
 <!-- 
 
 <div class="intro_section">
