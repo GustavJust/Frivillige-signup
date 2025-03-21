@@ -13,8 +13,12 @@ import Button from "./button.astro";
     <!-- Text -->
     <div class="text-container">
       <p>
-        Lorem ipsum dolor sit amet consectetur. Arcu massa lorem quis egestas in eu lobortis cursus mi.. Commodo sagittis fringilla et etiam. Velit cursus sollicitudin sodales urna sapien non accumsan amet.. Purus ultrices libero tellus natoque.
-        Mauris adipiscing sed lorem elementum. At mi porta lectus sit consectetur.. Varius ipsum suspendisse mauris eu posuere felis at congue dolor..
+        Lorem ipsum dolor sit amet consectetur. Arcu massa lorem quis egestas in
+        eu lobortis cursus mi.. Commodo sagittis fringilla et etiam. Velit
+        cursus sollicitudin sodales urna sapien non accumsan amet.. Purus
+        ultrices libero tellus natoque. Mauris adipiscing sed lorem elementum.
+        At mi porta lectus sit consectetur.. Varius ipsum suspendisse mauris eu
+        posuere felis at congue dolor..
       </p>
     </div>
 
@@ -124,6 +128,9 @@ import Button from "./button.astro";
       margin-top: 20px; /* Space between content and button */
       padding-right: 25%;
     }
+    .content-container {
+      align-items: left;
+    }
   }
 
   @media (min-width: 1260px) {
@@ -132,10 +139,17 @@ import Button from "./button.astro";
       margin-top: 20px; /* Space between content and button */
       padding-right: 10%;
     }
+    .content-container {
+      align-items: left;
+    }
   }
   .fade {
     background: rgb(255, 255, 255);
-    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(0, 106, 250, 1) 100%);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(0, 106, 250, 1) 100%
+    );
     width: 2400px;
     margin-left: -100px;
     height: 30px;
@@ -144,7 +158,11 @@ import Button from "./button.astro";
 
   .fade_ned {
     background: rgb(0, 106, 250);
-    background: linear-gradient(180deg, rgba(0, 106, 250, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(
+      180deg,
+      rgba(0, 106, 250, 1) 0%,
+      rgba(255, 255, 255, 1) 100%
+    );
     width: 2400px;
     margin-left: -100px;
     margin-bottom: -85px;

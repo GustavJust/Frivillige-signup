@@ -609,7 +609,7 @@
       font-weight: 1500;
       line-height: 0;
       writing-mode: vertical-rl;
-      transform: rotate(180deg) translateX(-70%); /* Rotates text 180 degrees */
+      transform: rotate(180deg) translateX(-70%);
       white-space: nowrap; /* Prevents wrapping */
       margin: 0;
       -webkit-text-stroke: 2px black; /* Adds a thin black outline */
@@ -646,5 +646,16 @@
     > :nth-child(6) {
       transform: translateX(250%);
     }
+  }
+
+  @media (width > 800px) {
+    .header_container {
+      > h1 {
+        writing-mode: horizontal-tb;
+        transform: rotate(0) translateX(10%) translateY(20%); /* Rotates text 180 degrees */
+      }
+
+    }
+  }
   }
 </style>

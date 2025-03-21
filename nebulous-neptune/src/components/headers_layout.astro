@@ -86,4 +86,31 @@ const {
       margin-top: var(--text-spacing);
     }
   }
+  @media (width > 800px) {
+    .overskrift {
+    position: relative;
+
+    > .moon {
+      position: absolute;
+      z-index: 1;
+      scale: 0.4;
+      top: -80%;
+      left: 60%;
+    }
+    > .heart {
+      position: absolute;
+      z-index: 1;
+      scale: 4;
+      top: -10%;
+      left: 80%;
+    }
+    > h2 {
+      position: relative;
+      width: fit-content;
+    }
+
+    > p {
+      width: fit-content;
+    }
+  }
 </style>
